@@ -133,23 +133,13 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"one_fm_google_integration.tasks.all"
-# 	],
-# 	"daily": [
-# 		"one_fm_google_integration.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"one_fm_google_integration.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"one_fm_google_integration.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"one_fm_google_integration.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    "cron": {
+        "*/15 * * * *": [ # Update Google Sheet. Runs every 15 mins.
+            'one_fm_google_integration.one_fm_google_sheet.doctype.google_sheet_data_export.exporter.update_google_sheet_daily'
+        ]
+    }
+}
 
 # Testing
 # -------
@@ -226,4 +216,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
