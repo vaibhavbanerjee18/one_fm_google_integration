@@ -9,5 +9,6 @@ COPY . /app
 
 RUN pip install --no-cache-dir -r requirements.txt || pip install --no-cache-dir .
 
-CMD ["python3"]
+CMD ["tail", "-f", "/dev/null"]
+
 
