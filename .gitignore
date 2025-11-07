@@ -4,4 +4,11 @@
 *.swp
 tags
 node_modules
-__pycache__
+__pycache__# ignore prometheus/node_exporter binaries & archives
+node_exporter-*
+prometheus-*
+*.tar.gz
+
+# local system paths (don't track)
+/opt/
+/etc/prometheus/
