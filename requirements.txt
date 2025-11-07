@@ -1,4 +1,4 @@
-frappe>=14.0.0
+git+https://github.com/frappe/frappe.git@version-14
 pytest
 requests
 boto3
