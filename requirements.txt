@@ -1,0 +1,5 @@
+frappe>=14.0.0
+pytest
+requests
+boto3
+
